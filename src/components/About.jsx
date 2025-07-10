@@ -3,14 +3,14 @@ function About(){
     <section className="flex min-h-screen sm:flex-row flex-col-reverse">
       <article className="flex-1 flex px-4 py-5 gap-2">
         <div className="flex flex-col sm:justify-center">
-          <img src="images/about-image-1.png" className="w-60"/>
+          <img src="images/about-image-1.png" className="w-60 hover:scale-105 transition-all"/>
           <div className="grid place-content-end">
-            <img src="images/about-image-4.png" className="w-32"/>
+            <img src="images/about-image-4.png" className="w-32 hover:scale-105 transition-all"/>
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <img src="images/about-image-2.png" className="w-64"/>
-          <img src="images/about-image-3.png" className="w-64"/>
+          <img src="images/about-image-2.png" className="w-64 hover:scale-105 transition-all"/>
+          <img src="images/about-image-3.png" className="w-64 hover:scale-105 transition-all"/>
         </div>
       </article>
       <article className="flex-1 flex flex-col justify-center gap-3 px-5">
