@@ -114,13 +114,26 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-gray-700 dark:text-white"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X /> : <Menu />}
-        </button>
+        {/* Mobile Toggle + Theme Toggle */}
+        <div className="md:hidden flex items-center justify-between px-4 py-3">
+          {/* Theme toggle button on the LEFT */}
+          <button
+            onClick={toggleTheme}
+            className="text-gray-800 dark:text-gray-100 hover:text-[#CCAA35]"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <Moon /> : <Sun />}
+          </button>
+
+          {/* Hamburger button on the RIGHT with margin-left to separate from toggle */}
+          <button
+            className="text-gray-700 dark:text-white ml-3"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
@@ -143,9 +156,11 @@ export default function Header() {
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setDropdownClickOpen(!dropdownClickOpen)}
-              className="flex items-center gap-1 py-2"
+              className="flex items-center py-2 space-x-1"
             >
-              <ChevronDown /> <span>Menu</span>
+              <span>Menu</span>
+              {/* Dropdown arrow just next to Menu text */}
+              <ChevronDown />
             </button>
             {dropdownClickOpen && (
               <div className="mt-2 bg-white dark:bg-gray-800 shadow rounded-md p-2 space-y-1 z-50">
@@ -177,14 +192,6 @@ export default function Header() {
               Book
             </button>
           </Link>
-
-          {/* Theme toggle */}
-          <button
-            onClick={toggleTheme}
-            className="mt-2 text-gray-800 dark:text-gray-100 hover:text-[#CCAA35]"
-          >
-            {theme === 'light' ? <Moon /> : <Sun />}
-          </button>
         </div>
       )}
     </header>
