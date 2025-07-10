@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dopi95.github.io/Restaurant-Website",
+  "homepage": "https://github.com/dopi95/ArtisanBlend-Restaurant-App.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
