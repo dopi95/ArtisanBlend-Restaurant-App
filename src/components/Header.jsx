@@ -96,7 +96,7 @@ export default function Header() {
           </Link>
 
           {/* Book Button */}
-          <Link to="book" smooth duration={500}>
+          <Link to="reservation" smooth duration={500}>
             <button
               className="px-4 py-2 rounded-md hover:opacity-90 transition"
               style={{ backgroundColor: '#CCAA35', color: '#fff' }}
@@ -168,11 +168,11 @@ export default function Header() {
             )}
           </div>
 
-          {/* Book */}
-          <Link to="book" smooth duration={500}>
+          <Link to="reservation" smooth duration={500}>
             <button
-              className="w-full mt-4 rounded-md"
-              style={{ backgroundColor: '#CCAA35', color: '#000' }}
+              className="w-full mt-4 rounded-md hover:opacity-90 transition"
+              style={{ backgroundColor: '#CCAA35', color: '#fff' }}
+              onClick={() => setMenuOpen(false)}
             >
               Book
             </button>
