@@ -27,16 +27,16 @@ function Review(){
   }
 
   return (
-        <main className="min-h-screen bg-slate-500 flex flex-col gap-10 p-5">
+        <main className="min-h-screen flex flex-col gap-10 p-5">
           <h1 className="text-center text-4xl font-bold">Reviews</h1>
           <section className="grid md:grid-cols-2 grid-cols-1 gap-14">
             {renderReviews()}
           </section>
           <section className="flex items-center justify-center">
-            <article className="sm:w-2/4 w-2/3 border border-slate-950 border-solid rounded-lg py-4 px-5 flex flex-col gap-2">
+            <article className="bg-[#FFFFFF] sm:w-2/4 w-2/3 border-2 border-slate-950 border-solid rounded-lg py-4 px-5 flex flex-col gap-2">
               <p className="text-center text-2xl">Want to comment on our services? Leave a review below!</p>
               <div className="grid place-content-center">
-                <button className="text-xl sm:px-8 px-2 py-2 font-bold hover:opacity-90 bg-gold rounded-lg">Leave a review</button>
+                <a href="#" className="text-xl sm:px-8 px-2 py-2 font-bold hover:opacity-90 bg-gold rounded-lg">Leave a review</a>
               </div>
             </article>
           </section>
