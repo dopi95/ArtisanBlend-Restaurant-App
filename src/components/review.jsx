@@ -8,11 +8,19 @@ function Review(){
   function renderReviews(){
     return reviews.map((review)=>{
       return(
-        <article key={nanoid()}>
-          <div className="relative h-96 w-60 rounded-bl-[3rem] border border-black">
-            <img src={`${review.image}`} className="w-60 absolute -top-4 -right-4"/>
+        <article key={nanoid()} className="flex sm:flex-row flex-col-reverse gap-10 px-5">
+          <div className="relative sm:h-96 h-40 w-60 rounded-bl-[3rem] border border-black flex-1 ml-4">
+            <img src={`${review.image}`} className="w-60 sm:absolute relative -top-4 -right-4 sm:h-auto h-40"/>
           </div>
-          <div></div>
+          <div className="flex flex-col bg-card p-4 flex-1 rounded-none">
+            <div className="grid place-content-start">
+              <img src="icons/5star-rate.png" className="w-20"/>
+            </div>
+            <p className="text-xl italic"><q>{review.comment}</q></p>
+            <div className="grid place-content-end">
+              <p className="font-bold text-2xl">-{review.reviewer}</p>
+            </div>
+          </div>
         </article>
       )
     })
@@ -21,8 +29,16 @@ function Review(){
   return (
         <main className="min-h-screen bg-slate-500 flex flex-col gap-10 p-5">
           <h1 className="text-center text-4xl font-bold">Reviews</h1>
-          <section className="grid grid-cols-2 gap-8">
+          <section className="grid md:grid-cols-2 grid-cols-1 gap-14">
             {renderReviews()}
+          </section>
+          <section className="flex items-center justify-center">
+            <article className="sm:w-2/4 w-2/3 border border-slate-950 border-solid rounded-lg py-4 px-5 flex flex-col gap-2">
+              <p className="text-center text-2xl">Want to comment on our services? Leave a review below!</p>
+              <div className="grid place-content-center">
+                <button className="text-xl sm:px-8 px-2 py-2 font-bold hover:opacity-90 bg-gold rounded-lg">Leave a review</button>
+              </div>
+            </article>
           </section>
         </main>
     )
