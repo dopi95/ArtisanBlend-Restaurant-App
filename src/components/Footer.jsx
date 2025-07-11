@@ -3,7 +3,7 @@ function Footer(){
   const hours = today.getHours();
   const currentYear = today.getFullYear();
   return (
-    <footer className="px-4 py-2 absolute bottom-0 w-full">
+    <footer className="px-4 py-2 absolute w-full bg-white dark:bg-gray-900">
       <section className="flex md:flex-row flex-col gap-2">
         <article className="flex-1">
           <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7478907522877!2d36.84997537372774!3d-1.3272411356696567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f117acdcb2ed5%3A0xb9292d5431ba196b!2sArtisan%20Blend%20Cafe!5e0!3m2!1sen!2srw!4v1752148523638!5m2!1sen!2srw" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
