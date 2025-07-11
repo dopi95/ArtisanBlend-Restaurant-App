@@ -4,6 +4,12 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      colors: {
+        gold: '#CCAA35',
+      },
+      fontFamily: {
+        curly: ['"Pacifico"', 'cursive'], // Make sure to import this font in your HTML or CSS
+      },
       animation: {
         blink: 'blink 1s steps(2, start) infinite',
         slideDown: 'slideDown 0.4s ease-out',
