@@ -1,16 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
       colors: {
-        "gold" : "#FFD700",
-        "card" : "#F5F5DC"
-      }
+
     },
   },
   plugins: [],
-}
+};
