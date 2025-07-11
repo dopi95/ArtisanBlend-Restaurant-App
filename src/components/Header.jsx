@@ -21,6 +21,9 @@ export default function Header() {
 
   const menuItems = ['Break Fast', 'Main Dishes', 'Desserts', 'Drinks'];
 
+  // Common class for nav buttons in mobile menu to unify style
+  const navButtonClass = "text-gray-800 dark:text-gray-100 text-base font-medium text-center";
+
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme') || 'light';
     setTheme(storedTheme);
@@ -34,7 +37,6 @@ export default function Header() {
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
-  // Close dropdown if clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -47,13 +49,11 @@ export default function Header() {
 
   const handleScrollToSection = (id) => {
     if (location.pathname === '/') {
-      // On home page, scroll smoothly to section
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Navigate to home first, then scroll after small delay
       navigate('/');
       setTimeout(() => {
         const el = document.getElementById(id);
@@ -175,26 +175,29 @@ export default function Header() {
                 </button>
               </div>
 
-              <div className="flex flex-col px-6 py-4 space-y-4">
-                {navLinks.map(({ label, to }) => (
-                  <button
-                    key={label}
-                    onClick={() => {
-                      setMenuOpen(false);
-                      handleScrollToSection(to);
-                    }}
-                    className="text-gray-800 dark:text-gray-100 text-lg font-medium"
-                    type="button"
-                  >
-                    {label}
-                  </button>
-                ))}
+              <div className="flex flex-col items-center px-6 py-4 space-y-4">
+                {/* Home, About, Signature Dishes */}
+                {navLinks
+                  .filter(({ label }) => label !== 'Chatbot')
+                  .map(({ label, to }) => (
+                    <button
+                      key={label}
+                      onClick={() => {
+                        setMenuOpen(false);
+                        handleScrollToSection(to);
+                      }}
+                      className={navButtonClass}
+                      type="button"
+                    >
+                      {label}
+                    </button>
+                  ))}
 
-                {/* Dropdown inside mobile panel */}
-                <div ref={dropdownRef}>
+                {/* Dropdown Menu */}
+                <div ref={dropdownRef} className="w-full flex justify-center">
                   <button
                     onClick={() => setDropdownClickOpen(!dropdownClickOpen)}
-                    className="flex items-center text-gray-800 dark:text-gray-100 space-x-2"
+                    className="flex items-center justify-center text-gray-800 dark:text-gray-100 text-base font-medium space-x-2"
                     type="button"
                   >
                     <span>Menu</span>
@@ -202,12 +205,12 @@ export default function Header() {
                   </button>
 
                   {dropdownClickOpen && (
-                    <div className="mt-2 ml-2 p-2 rounded-md space-y-1 bg-white dark:bg-gray-800 shadow">
+                    <div className="mt-2 p-2 rounded-md space-y-1 bg-white dark:bg-gray-800 shadow w-48">
                       {menuItems.map((item) => (
                         <Link
                           key={item}
                           to={`/menu/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="block text-sm px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                          className="block text-base font-medium text-gray-800 dark:text-gray-100 px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-center"
                           onClick={() => {
                             setDropdownClickOpen(false);
                             setMenuOpen(false);
@@ -220,12 +223,25 @@ export default function Header() {
                   )}
                 </div>
 
+                {/* Chatbot */}
+                <button
+                  onClick={() => {
+                    setMenuOpen(false);
+                    handleScrollToSection('chatbot');
+                  }}
+                  className={navButtonClass}
+                  type="button"
+                >
+                  Chatbot
+                </button>
+
+                {/* Book Button */}
                 <button
                   onClick={() => {
                     setMenuOpen(false);
                     handleScrollToSection('reservation');
                   }}
-                  className="w-full py-2 mt-4 rounded-md hover:opacity-90 transition"
+                  className="w-full py-2 mt-4 rounded-md hover:opacity-90 transition text-center text-base font-medium"
                   style={{ backgroundColor: '#CCAA35', color: '#fff' }}
                   type="button"
                 >
