@@ -86,11 +86,12 @@ export default function HeroSection() {
           >
             See Menu
           </Link>
-            <Link
+                 {/* Chatbot icon in bottom-right corner of Hero only */}
+      <Link
         to="chatbot"
         smooth={true}
         duration={500}
-        className="fixed bottom-6 right-6 z-50"
+        className="absolute bottom-6 right-6 z-20"
       >
         <div className="bg-[#CCAA35] hover:bg-yellow-400 transition p-3 rounded-full shadow-lg cursor-pointer">
           <img
@@ -100,6 +101,7 @@ export default function HeroSection() {
           />
         </div>
       </Link>
+
         </div>
       </div>
     </section>
