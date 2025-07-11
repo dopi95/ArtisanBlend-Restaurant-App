@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         "gold" : "#FFD700",
+        "darkgold" : "#B8860B",
         "card" : "#F5F5DC"
       }
     },

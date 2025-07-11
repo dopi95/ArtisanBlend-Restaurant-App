@@ -74,7 +74,7 @@ function Reservation() {
             />
             </div>
           </div>
-          <div className="flex gap-4 bg-green-300">
+          <div className="flex gap-4">
             <div className="flex-1">
               <label htmlFor="reservationDate" className="text-gray-950 text-xl font-semibold block">Reservation Date:</label>
               <DatePicker
@@ -82,7 +82,8 @@ function Reservation() {
                 // selected={selectedDate}
                 dateFormat="MM/dd/yyyy"
                 placeholderText="Select Reservation Date"
-                className="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border border-solid border-gold cursor-pointer"
+                required
+                className="outline-none w-[25.5rem] rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border border-solid border-gold cursor-pointer"
               />
             </div>
             <div className="flex-1">
@@ -96,9 +97,13 @@ function Reservation() {
                 timeCaption="Time"
                 timeIntervals={15}
                 placeholderText="Select Reservation Time"
-                className="outline-none w- rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border border-solid border-gold cursor-pointer"
+                required
+                className="outline-none w-[25.5rem] rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border border-solid border-gold cursor-pointer"
               />
             </div>
+          </div>
+          <div className="grid place-content-center w-full">
+            <button type="submit" className="px-4 py-2 bg-darkgold hover:bg-opacity-90 text-white font-bold rounded-lg">Book</button>
           </div>
         </form>
       </section>
