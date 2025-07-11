@@ -37,7 +37,6 @@ function ReservationData() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4 relative overflow-hidden">
-      {/* Decorative circles from your image */}
       <div className="absolute top-1/4 -left-16 w-32 h-32 bg-gold rounded-full opacity-30 blur-2xl transform rotate-45"></div>
       <div className="absolute bottom-1/4 -right-16 w-32 h-32 bg-gold rounded-full opacity-30 blur-2xl transform -rotate-45"></div>
 
@@ -51,47 +50,46 @@ function ReservationData() {
           </svg>
         </div>
 
-        {/* Successfully Reserved Your Table! */}
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Successfully Reserved Your Table!</h2>
         <p className="text-lg md:text-xl font-semibold text-gray-600 mb-8">Reservation ID: {reservationId}</p>
 
-        {/* Reservation Details Grid */}
+        {/* reservation datas grid */}
         <div className="grid grid-cols-2 gap-y-4 gap-x-8 text-left w-full max-w-sm mb-10">
-          {/* Name */}
+          {/* name */}
           <div className="col-span-1">
             <p className="text-gray-500 font-medium text-lg">Name</p>
             <p className="text-gray-800 font-semibold text-xl">{reservation.firstName} {reservation.secondName}</p>
           </div>
-          {/* Date */}
+          {/* date */}
           <div className="col-span-1">
             <p className="text-gray-500 font-medium text-lg">Date</p>
             <p className="text-gray-800 font-semibold text-xl">
               {reservation.date ? new Date(reservation.date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' }) : 'N/A'}
             </p>
           </div>
-          {/* Time */}
+          {/* time */}
           <div className="col-span-1">
             <p className="text-gray-500 font-medium text-lg">Time</p>
             <p className="text-gray-800 font-semibold text-xl">{reservation.time || 'N/A'}</p>
           </div>
-          {/* Duration */}
+          {/* duration */}
           <div className="col-span-1">
             <p className="text-gray-500 font-medium text-lg">Duration</p>
             <p className="text-gray-800 font-semibold text-xl">{duration}</p>
           </div>
-          {/* Number of guests */}
+          {/* number of guests */}
           <div className="col-span-1">
             <p className="text-gray-500 font-medium text-lg">Number of guests</p>
             <p className="text-gray-800 font-semibold text-xl">{reservation.numGuests || 'N/A'}</p>
           </div>
-          {/* Note */}
+          {/* note */}
           <div className="col-span-1">
             <p className="text-gray-500 font-medium text-lg">Note</p>
             <p className="text-gray-800 font-semibold text-xl">{noteDisplay}</p>
           </div>
         </div>
 
-        {/* Thank you message */}
+        {/* thanks message */}
         <p className="text-xl md:text-2xl font-bold text-gray-700">Thank you for booking with us. Enjoy! </p>
       </section>
     </main>
