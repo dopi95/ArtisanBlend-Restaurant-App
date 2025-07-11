@@ -1,7 +1,11 @@
+
+import Header from './components/Header';
+
 export default function App() {
   return (
-    <h1 className="text-4xl font-bold text-center mt-20 text-blue-600">
-      React + Vite + Tailwind CSS is working!
-    </h1>
+     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <Header />
+      {/* Other components */}
+    </div>
   );
 }
