@@ -4,7 +4,6 @@ import hero1 from "../../public/images/hero1.jpg";
 import hero2 from "../../public/images/hero2.jpg";
 import hero3 from "../../public/images/hero3.jpg";
 import hero4 from "../../public/images/hero4.jpg";
-import chatbotIcon from "../../public/icons/chatbot.png";
 
 const images = [hero1, hero2, hero3, hero4];
 
@@ -81,20 +80,6 @@ export default function HeroSection() {
           See Menu
         </Link>
       </div>
-
-      {/* Chatbot icon with bg */}
-      <a
-        href="#chatbot"
-        className="absolute bottom-6 right-6 z-20 bg-black bg-opacity-60 rounded-full p-3 shadow-lg hover:bg-opacity-80 transition"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src={chatbotIcon}
-          alt="Chatbot"
-          className="w-14 h-14 cursor-pointer"
-        />
-      </a>
     </section>
   );
 }
