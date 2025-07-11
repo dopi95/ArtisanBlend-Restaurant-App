@@ -1,6 +1,7 @@
 import reviewData from "../data/reviewsdata"
 import { useState } from "react"
 import { nanoid } from "nanoid";
+import rate from '../../public/icons/5star-rate.png'
 function Review(){
   const [reviews, setReviews] = useState(reviewData);
 
@@ -14,7 +15,7 @@ function Review(){
           </div>
           <div className="flex flex-col bg-card p-4 flex-1 rounded-none">
             <div className="grid place-content-start">
-              <img src="icons/5star-rate.png" className="w-20"/>
+              <img src={rate} className="w-20"/>
             </div>
             <p className="text-xl italic"><q>{review.comment}</q></p>
             <div className="grid place-content-end">
@@ -32,11 +33,11 @@ function Review(){
           <section className="grid md:grid-cols-2 grid-cols-1 gap-14">
             {renderReviews()}
           </section>
-          <section className="flex items-center justify-center">
-            <article className="bg-[#FFFFFF] sm:w-2/4 w-2/3 border-2 border-slate-950 border-solid rounded-lg py-4 px-5 flex flex-col gap-2">
+          <section className="flex items-center justify-center ">
+            <article className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 sm:w-2/4 w-2/3 border-2 border-slate-950 border-solid rounded-lg py-4 px-5 flex flex-col gap-2">
               <p className="text-center text-2xl">Want to comment on our services? Leave a review below!</p>
               <div className="grid place-content-center">
-                <a href="#" className="text-xl sm:px-8 px-2 py-2 font-bold hover:opacity-90 bg-gold rounded-lg">Leave a review</a>
+                <a href="#" className="text-xl sm:px-8 px-2 py-2 font-bold hover:opacity-90 bg-gold rounded-lg text-white">Leave a review</a>
               </div>
             </article>
           </section>
