@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 function Reservation() {
@@ -24,6 +24,23 @@ function Reservation() {
   // state for submission feedback
   const [submissionMessage, setSubmissionMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // UseEffect to cler submission message after a delay
+  useEffect(()=> {
+    let timer; // to het the id so we can clean up the effevt later
+    if (isSubmitted && submissionMessage) {
+    // if the form was successfully submitted and there's a message run
+      timer = setTimeout(() => {
+        setSubmissionMessage(''); // Clear the message
+        setIsSubmitted(false);    // Reset submission status
+      }, 5000); // Clear after 5 seconds (5000 milliseconds)
+    }
+  // cleanup function to run if the issubmitted is no longer in use
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isSubmitted, submissionMessage]); // dependenciews to command when use effect should happen
+
 
   // declare a variable to store char count of the notes input
   const maxNotesCharacters = 50;
