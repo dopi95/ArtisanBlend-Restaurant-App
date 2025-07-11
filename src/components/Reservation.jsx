@@ -1,3 +1,5 @@
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 function Reservation() {
   return(
     <main className="px-5 flex flex-col items-center">
@@ -70,6 +72,32 @@ function Reservation() {
                 placeholder="Any Special Treatment" 
                 className="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border border-solid border-gold" 
             />
+            </div>
+          </div>
+          <div className="flex gap-4 bg-green-300">
+            <div className="flex-1">
+              <label htmlFor="reservationDate" className="text-gray-950 text-xl font-semibold block">Reservation Date:</label>
+              <DatePicker
+                id="reservationDate"
+                // selected={selectedDate}
+                dateFormat="MM/dd/yyyy"
+                placeholderText="Select Reservation Date"
+                className="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border border-solid border-gold cursor-pointer"
+              />
+            </div>
+            <div className="flex-1">
+              <label htmlFor="reservationTime" className="text-gray-950 text-xl font-semibold block">Reservation Time:</label>
+              <DatePicker
+                id="reservationTime"
+                // selected={selectedTime}
+                showTimeSelect
+                showTimeSelectOnly
+                dateFormat="h:mm aa"
+                timeCaption="Time"
+                timeIntervals={15}
+                placeholderText="Select Reservation Time"
+                className="outline-none w- rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border border-solid border-gold cursor-pointer"
+              />
             </div>
           </div>
         </form>
