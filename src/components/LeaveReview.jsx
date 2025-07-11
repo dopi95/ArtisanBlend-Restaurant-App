@@ -1,3 +1,4 @@
+import StarRating from "./StarRating"
 function LeaveReview(){
   return(
     <main className="p-5 md:max-h-screen">
@@ -5,7 +6,7 @@ function LeaveReview(){
       <section className="flex border-black border rounded-none mt-6 mx-4">
         <article class="p-10 mx-8 flex flex-col gap-4 flex-1">
           <h3 class="text-2xl">How would you rate us?</h3>
-          <div id="star_rating" class="flex gap-2"></div>
+          <StarRating/>
           <form action="" class="md:max-w-3xl md:min-w-72 py-2">
             <label for="name" class="text-gray-950 text-xl font-bold">Name:</label>
             <input type="text" id="name" placeholder="Name" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 border-2 border-solid border-gray-700" required/>
