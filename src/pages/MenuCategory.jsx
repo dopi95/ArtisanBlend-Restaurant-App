@@ -1,7 +1,7 @@
 // src/pages/MenuCategory.jsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import menuData from '../data/MenuData';  // <-- updated here
+import menuData from '../data/MenuData';
 
 export default function MenuCategory() {
   const { category } = useParams();
@@ -25,15 +25,18 @@ export default function MenuCategory() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredDishes.map((dish) => (
             <div key={dish.id} className="p-4 border rounded shadow hover:shadow-lg transition">
+              <img
+                src={dish.image}
+                alt={dish.name}
+                className="w-full h-48 object-cover rounded mb-4"
+              />
               <h2 className="text-xl font-semibold">{dish.name}</h2>
               <p className="mt-2 text-gray-600">{dish.description}</p>
-              <p className="mt-1 font-semibold text-[#CCAA35]">${dish.price.toFixed(2)}</p>
+              <p className="mt-1 font-semibold text-[#CCAA35]">sh {dish.price}</p>
             </div>
           ))}
         </div>
       )}
-
-     
     </div>
   );
 }
