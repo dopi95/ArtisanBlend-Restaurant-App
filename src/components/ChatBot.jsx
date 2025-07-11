@@ -32,7 +32,7 @@ export default function ChatBot() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" id="chatbot">
       {/* Chatbot Container */}
       <div className="relative z-10 w-full max-w-4xl border border-gray-300 dark:border-gray-700 rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-lg min-h-[600px] flex flex-col justify-between">
         {/* Top-left back icon */}

@@ -40,8 +40,7 @@ export default function HeroSection() {
   }, [typingIndex, fullText]);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      {/* Image carousel */}
+    <section className="relative w-full h-screen overflow-hidden"id="hero">
       <div className="absolute inset-0">
         {images.map((img, idx) => (
           <img
