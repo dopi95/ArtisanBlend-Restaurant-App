@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import hero1 from "../../public/images/hero1.jpg";
-import hero2 from "../../public/images/hero2.jpg";
-import hero3 from "../../public/images/hero3.jpg";
-import hero4 from "../../public/images/hero3.jpg";
+import hero1 from "../../public/images/sl1.jpg";
+import hero2 from "../../public/images/sl2.jpg";
+import hero3 from "../../public/images/sl3.jpg";
+import hero4 from "../../public/images/sl4.jpg";
+import chatboticon from "../../public/icons/chatbot.png";
+
 
 const images = [hero1, hero2, hero3, hero4];
 
@@ -84,6 +86,20 @@ export default function HeroSection() {
           >
             See Menu
           </Link>
+            <Link
+        to="chatbot"
+        smooth={true}
+        duration={500}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <div className="bg-[#CCAA35] hover:bg-yellow-400 transition p-3 rounded-full shadow-lg cursor-pointer">
+          <img
+            src={chatboticon}
+            alt="Chatbot"
+            className="w-10 h-10 object-contain"
+          />
+        </div>
+      </Link>
         </div>
       </div>
     </section>
