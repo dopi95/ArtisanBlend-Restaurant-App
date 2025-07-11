@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import hero1 from "../../public/images/hero1.jpg";
 import hero2 from "../../public/images/hero2.jpg";
 import hero3 from "../../public/images/hero3.jpg";
-import hero4 from "../../public/images/hero4.jpg";
+import hero4 from "../../public/images/hero3.jpg";
 
 const images = [hero1, hero2, hero3, hero4];
 
@@ -77,7 +77,7 @@ export default function HeroSection() {
           </p>
 
           <Link
-            to="menu"
+            to="signature"
             smooth={true}
             duration={500}
             className="inline-block px-6 py-3 rounded-md bg-[#CCAA35] text-white font-semibold cursor-pointer hover:bg-yellow-400 transition w-max"
