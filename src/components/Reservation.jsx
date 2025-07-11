@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { useNavigate } from 'react-router-dom';
 function Reservation() {
 
   // declare inpuut states
@@ -30,15 +31,11 @@ function Reservation() {
     let timer; // to het the id so we can clean up the effevt later
     if (isSubmitted && submissionMessage) {
     // if the form was successfully submitted and there's a message run
-      timer = setTimeout(() => {
+      setTimeout(() => {
         setSubmissionMessage(''); // Clear the message
         setIsSubmitted(false);    // Reset submission status
       }, 5000); // Clear after 5 seconds (5000 milliseconds)
     }
-  // cleanup function to run if the issubmitted is no longer in use
-    return () => {
-      clearTimeout(timer);
-    };
   }, [isSubmitted, submissionMessage]); // dependenciews to command when use effect should happen
 
 
@@ -105,6 +102,7 @@ function Reservation() {
     return isValid
   }
 
+  const navigate = useNavigate();
   // implement form submission logic
   const handleSubmit = (e)=>{
     e.preventDefault();  // prevent default form submission behavious like reloading ...
@@ -156,6 +154,10 @@ function Reservation() {
       setPhoneError("");
       setDateError("");
       setTimeError("");
+
+      // go to resrvation-suceeded when clicked, here navigate is a maps function
+      // still studying this, return here
+      navigate('/reservation-successeded',{state: {newReservation}});
     }else{
       setSubmissionMessage("Please Correct errors in the Form!");
       setIsSubmitted(false);
