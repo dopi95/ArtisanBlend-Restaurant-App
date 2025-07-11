@@ -1,6 +1,6 @@
 // src/components/ChatBot.jsx
 import React, { useState } from 'react';
-import { ArrowRight, ChevronLeft } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const samplePrompts = [
   "What’s the most popular dish?",
@@ -35,13 +35,6 @@ export default function ChatBot() {
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" id="chatbot">
       {/* Chatbot Container */}
       <div className="relative z-10 w-full max-w-4xl border border-gray-300 dark:border-gray-700 rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-lg min-h-[600px] flex flex-col justify-between">
-        {/* Top-left back icon */}
-        <a
-          href="#"
-          className="absolute top-4 left-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#ccaa35] text-[#ccaa35] hover:bg-[#ccaa35] hover:text-white transition"
-        >
-          <ChevronLeft size={16} />
-        </a>
 
         {/* Header Text */}
         <div>
