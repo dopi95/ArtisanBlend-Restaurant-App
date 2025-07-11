@@ -9,7 +9,7 @@ function About(){
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <img src="images/about-image-2.png" className="w-64 hover:scale-105 transition-all"/>
+          <img src="/images/about-image-2.png" className="w-64 hover:scale-105 transition-all"/>
           <img src="images/about-image-3.png" className="w-64 hover:scale-105 transition-all"/>
         </div>
       </article>
