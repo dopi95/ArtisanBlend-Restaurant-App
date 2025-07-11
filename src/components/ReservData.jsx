@@ -1,6 +1,5 @@
-// src/components/ReservationData.jsx
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom'; // Only useLocation is needed if no navigation is happening from this page
+import { useLocation } from 'react-router-dom';
 
 function ReservationData() {
   const location = useLocation();
@@ -11,10 +10,12 @@ function ReservationData() {
     // even though i found a away i don't merit it
     if (location.state && location.state.newReservation) {
       setReservation(location.state.newReservation);
+    }else{
+      console.log("we got problems importing data")
     }
   }, [location.state]); // Dependency array: re-run if location.state changes
 
-  // Display loading/no data message if reservation object is not yet available
+  // display loading/no data message if reservation object is not yet booked
   if (!reservation) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -25,7 +26,7 @@ function ReservationData() {
 
   // Generate a simple, consistent reservation ID.
   // As per your screenshot, it's a fixed string "12345678".
-  const reservationId = "12345678";
+  const reservationId = reservation.id ? reservation.id.toString().slice(0, 8) : 'N/A';;
 
   // Dummy values for Duration and Note, as they were fixed in your screenshot
   const duration = "2 Hours";
@@ -43,7 +44,7 @@ function ReservationData() {
       <h1 className="text-center text-slate-950 font-bold text-3xl md:text-4xl my-6">View your E-booking below!</h1>
 
       <section className="bg-white border-2 border-gold rounded-xl shadow-xl p-6 md:p-10 w-full max-w-lg text-center flex flex-col items-center">
-        {/* Checkmark icon */}
+        {/* the check mark icon*/}
         <div className="mb-6">
           <svg className="w-24 h-24 text-gold" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
