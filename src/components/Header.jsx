@@ -164,8 +164,8 @@ export default function Header() {
         {menuOpen && (
           <div className="fixed inset-0 z-40 flex items-start justify-center bg-black/30 backdrop-blur-sm">
             <div className="bg-white dark:bg-gray-900 rounded-b-xl w-full max-w-md mx-auto mt-0 animate-slideDown shadow-lg overflow-hidden">
-              <div className="flex justify-between items-center p-4 border-b border-gray-300 dark:border-gray-700">
-                <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">Menu</span>
+              <div className="flex justify-end items-center p-4 border-b border-gray-300 dark:border-gray-700">
+                {/* Removed the "Menu" text here */}
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="text-gray-700 dark:text-white"
