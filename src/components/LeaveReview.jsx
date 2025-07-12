@@ -73,14 +73,14 @@ function LeaveReview(){
   }
 
   return(
-    <main className="p-5 md:max-h-screen">
+    <main className="p-5 min-h-screen mt-16">
       <h1 className="text-2xl font-bold">Leave a review</h1>
       <section className="flex md:flex-row flex-col border-black border rounded-none mt-6 mx-4">
         <article className="md:p-10 p-5 md:mx-8 mx-2 flex flex-col gap-4 flex-1">
           <h3 className="text-2xl">How would you rate us?</h3>
           <StarRating/>
           <form onSubmit={handleSubmit} className="md:max-w-3xl md:min-w-72 py-2">
-            <label htmlFor="name" className="text-gray-950 text-xl font-bold">Name:</label>
+            <label htmlFor="name" className="text-gray-950 dark:text-white text-xl font-bold">Name:</label>
             <input 
               type="text" 
               id="name" 
@@ -92,7 +92,7 @@ function LeaveReview(){
             />
             {nameError && <p className="text-xl font-bold text-orange-700">{nameError}</p>}
 
-            <label htmlFor="E-mail" className="text-gray-950 text-xl font-bold">E-mail:</label>
+            <label htmlFor="E-mail" className="text-gray-950 dark:text-white text-xl font-bold ">E-mail:</label>
             <input 
               type="email" 
               id="E-mail" 
@@ -104,7 +104,7 @@ function LeaveReview(){
             />
             {emailError && <p className="text-xl font-bold text-orange-700">{emailError}</p>}
 
-            <label htmlFor="review" className="text-gray-950 text-xl font-bold">Review:</label>
+            <label htmlFor="review" className="text-gray-950 dark:text-white text-xl font-bold">Review:</label>
             <textarea 
               name="review" 
               id="review" 

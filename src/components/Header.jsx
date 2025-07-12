@@ -21,7 +21,6 @@ export default function Header() {
 
   const menuItems = ['Break Fast', 'Main Dishes', 'Desserts', 'Drinks'];
 
-  // Common class for nav buttons in mobile menu to unify style
   const navButtonClass = "text-gray-800 dark:text-gray-100 text-base font-medium text-center";
 
   useEffect(() => {
@@ -62,6 +61,11 @@ export default function Header() {
     }
   };
 
+  const handleBookNowClick = () => {
+    navigate('/book-table');
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow transition-colors">
@@ -71,7 +75,6 @@ export default function Header() {
             <span className="text-xl font-bold text-gray-800 dark:text-gray-100">Artisan Blend</span>
           </div>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6 text-gray-800 dark:text-gray-100">
             {navLinks
               .filter(({ label }) => label !== 'Chatbot')
@@ -120,7 +123,7 @@ export default function Header() {
             </button>
 
             <button
-              onClick={() => handleScrollToSection('reservation')}
+              onClick={handleBookNowClick}
               className="px-4 py-2 rounded-md hover:opacity-90 transition"
               style={{ backgroundColor: '#CCAA35', color: '#fff' }}
               type="button"
@@ -138,7 +141,6 @@ export default function Header() {
             </button>
           </nav>
 
-          {/* Mobile Nav Toggle */}
           <div className="md:hidden flex items-center justify-between px-4 py-3">
             <button
               onClick={toggleTheme}
@@ -160,7 +162,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Overlay Menu */}
         {menuOpen && (
           <div className="fixed inset-0 z-40 flex items-start justify-center bg-black/30 backdrop-blur-sm">
             <div className="bg-white dark:bg-gray-900 rounded-b-xl w-full max-w-md mx-auto mt-0 animate-slideDown shadow-lg overflow-hidden">
@@ -176,7 +177,6 @@ export default function Header() {
               </div>
 
               <div className="flex flex-col items-center px-6 py-4 space-y-4">
-                {/* Home, About, Signature Dishes */}
                 {navLinks
                   .filter(({ label }) => label !== 'Chatbot')
                   .map(({ label, to }) => (
@@ -193,7 +193,6 @@ export default function Header() {
                     </button>
                   ))}
 
-                {/* Dropdown Menu */}
                 <div ref={dropdownRef} className="w-full flex justify-center">
                   <button
                     onClick={() => setDropdownClickOpen(!dropdownClickOpen)}
@@ -223,7 +222,6 @@ export default function Header() {
                   )}
                 </div>
 
-                {/* Chatbot */}
                 <button
                   onClick={() => {
                     setMenuOpen(false);
@@ -235,12 +233,8 @@ export default function Header() {
                   Chatbot
                 </button>
 
-                {/* Book Button */}
                 <button
-                  onClick={() => {
-                    setMenuOpen(false);
-                    handleScrollToSection('reservation');
-                  }}
+                  onClick={handleBookNowClick}
                   className="w-full py-2 mt-4 rounded-md hover:opacity-90 transition text-center text-base font-medium"
                   style={{ backgroundColor: '#CCAA35', color: '#fff' }}
                   type="button"

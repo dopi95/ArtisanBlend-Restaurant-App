@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         gold: '#CCAA35',
+        card : '#F5F5DC'
       },
       fontFamily: {
         curly: ['"Pacifico"', 'cursive'], // Make sure to import this font in your HTML or CSS

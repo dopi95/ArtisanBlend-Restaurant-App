@@ -2,6 +2,7 @@ import reviewData from "../data/reviewsdata"
 import { useState } from "react"
 import { nanoid } from "nanoid";
 import rate from '../../public/icons/5star-rate.png'
+import { Link } from "react-router-dom";
 function Review(){
   const [reviews, setReviews] = useState(reviewData);
 
@@ -17,9 +18,9 @@ function Review(){
             <div className="grid place-content-start">
               <img src={rate} className="w-20"/>
             </div>
-            <p className="text-xl italic"><q>{review.comment}</q></p>
+            <p className="text-xl italic text-slate-950"><q>{review.comment}</q></p>
             <div className="grid place-content-end">
-              <p className="font-bold text-2xl">-{review.reviewer}</p>
+              <p className="font-bold text-2xl text-slate-950">-{review.reviewer}</p>
             </div>
           </div>
         </article>
@@ -37,7 +38,7 @@ function Review(){
             <article className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 sm:w-2/4 w-2/3 border-2 border-slate-950 border-solid rounded-lg py-4 px-5 flex flex-col gap-2">
               <p className="text-center text-2xl">Want to comment on our services? Leave a review below!</p>
               <div className="grid place-content-center">
-                <a href="#" className="text-xl sm:px-8 px-2 py-2 font-bold hover:opacity-90 bg-gold rounded-lg text-white">Leave a review</a>
+                <Link to="/leave-review" className="text-xl sm:px-8 px-2 py-2 font-bold hover:opacity-90 bg-gold rounded-lg text-white">Leave a review</Link>
               </div>
             </article>
           </section>
