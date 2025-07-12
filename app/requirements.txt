@@ -1,0 +1,10 @@
+uvicorn
+langchain
+langchain-community
+langchain-chroma
+langchain-huggingface
+chromadb
+transformers
+torch
+sentence-transformers
+python-dotenv
