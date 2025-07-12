@@ -1,12 +1,76 @@
-# React + Vite
+# Artisan Blend Restaurant - Restaurant Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Artisan Blend Restaurant**, a modern, AI-integrated web experience that combines elegant UI/UX with a cutting-edge GenAI-powered chatbot. Built with React, Tailwind CSS, FastAPI, and Llama 2, this website offers both a visually stunning and interactive dining experience — fully responsive and intelligently guided.
 
-Currently, two official plugins are available:
+ 📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The **Restaurant-Website** project is a collaborative group effort to build a dynamic and interactive full-stack web application for a fictional high-end restaurant called **Artisan Blend**. It features an immersive frontend experience alongside an AI-powered backend chatbot integrated with Llama 2 and LangChain, answering user queries about reservations, menu, location, and more.
 
-## Expanding the ESLint configuration
+## 🚀 Live Link: https://artisan-blend.netlify.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👥 Team Members & Roles
+
+ 1. Finlay Ndung'u     UI/UX Designer        
+ 2. Yohanna Moges      UI/UX Designer        
+ 3. Elyas Yenealem     Full-Stack Developer  
+ 4. Ishimwe Eric       Full-Stack Developer  
+ 5. Sena Kebede        Generative AI Expert  
+
+🛠️ Tech Stack
+
+# 💻 Frontend
+- React (with Vite)
+- Tailwind CSS
+- React Router DOM
+- Framer Motion
+- Lucide React
+- LocalStorage APIs
+- Custom JavaScript for Effects
+
+### ⚙️ Backend
+- FastAPI
+- LangChain
+- Llama 2 (via Hugging Face)
+- Vector DB (ChromaDB or Pinecone)
+- Docker for containerization
+- Render or Railway for cloud deployment
+
+## 🌟 Key Features
+
+### ✅ Frontend
+- Sticky Header & Navigation with Section Links
+- Dark/Light Theme Toggle (with localStorage)
+- Image Carousel with Autoplay
+- Typewriter Effect for Restaurant Name
+- Signature Dishes (Load More + Category Filter)
+- Tooltip on Dish Hover
+- Dynamic Menu Pages using React Router (`/menu/starters`, `/menu/mains`, etc.)
+- Reservation Form with:
+  - Validation (email regex, required fields)
+  - Character Counter
+  - Date/Time Picker
+  - Guest Dropdown
+  - `localStorage` Save
+  - Confirmation Message
+- Chatbot Interface:
+  - Floating chat button
+  - Scrollable chat area
+  - Typing state simulation
+  - Sample prompts
+- Dynamic Footer:
+  - Real-time "Open/Closed" Status
+  - Contact Info & Social Media Icons
+
+### 🤖 Backend (GenAI Chatbot)
+- LangChain pipeline with memory management
+- Llama 2 model integration using Hugging Face
+- Vector DB-powered RAG pipeline for FAQ + menu + booking info
+- Query understanding with semantic search
+- Custom prompt templates and fallback strategies
+- Secure CORS & Rate Limiting
+- Full Dockerized FastAPI backend
+- Postman tested endpoints
+- Frontend ↔ Backend connection via `fetch()` API
+
+
+
