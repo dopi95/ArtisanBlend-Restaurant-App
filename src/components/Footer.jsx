@@ -4,6 +4,8 @@ import icon3 from "../../public/icons/icons8-at-50.png";
 import icon4 from "../../public/icons/icons8-lock-30.png";
 import icon5 from "../../public/icons/icons8-call-50.png";
 
+import {MapPin, Clock, Mail, Phone} from "lucide-react"
+
 function Footer(){
   const today = new Date();
   const hours = today.getHours();
@@ -18,8 +20,9 @@ function Footer(){
           <h1 className="text-center text-2xl font-bold">Get In Touch With Us</h1>
           <div className="grid sm:grid-cols-2 grid-cols-1 sm:grid-rows-2 grid-rows-1 p-4 gap-x-5 gap-y-6">
             <div className="flex flex-col items-center justify-center">
-              <img src={icon1} className="w-12"/>
-              <h2 className="text-xl text-slate-950 font-semibold">Address:</h2>
+              {/* <img src={icon1} className="w-12"/> */}
+              <MapPin className="text-slate-950 dark:text-white"/>
+              <h2 className="text-xl text-slate-950 font-semibold dark:text-white">Address:</h2>
               <address className="text-center">
                 <span className="whitespace-nowrap text-nowrap text-xl">Artisan Blend Cafe,</span><br/>
                 <span className="whitespace-nowrap text-nowrap text-xl">Mombassa Road, Nairobi,</span><br/>
@@ -27,20 +30,23 @@ function Footer(){
                 </address>
             </div>
             <div className="flex flex-col items-center ">
-              <img src={icon2} className="w-12"/>
-              <h2 className="text-xl text-slate-950 font-semibold">Opening Hours:</h2>
+              {/* <img src={icon2} className="w-12"/> */}
+              <Clock className="text-slate-950 dark:text-white"/>
+              <h2 className="text-xl text-slate-950 font-semibold dark:text-white">Opening Hours:</h2>
               <p>
                 <span className="text-nowrap whitespace-nowrap text-xl"><time>8:00 AM</time> - <time>5:00PM</time> daily</span>
               </p>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <img src={icon3} className="w-12"/>
-              <h2 className="text-xl text-slate-950 font-semibold">Email-Us:</h2>
+              {/* <img src={icon3} className="w-12"/> */}
+              <Mail className="text-slate-950 dark:text-white"/>
+              <h2 className="text-xl text-slate-950 font-semibold dark:text-white">Email-Us:</h2>
               <a href="mailto:info@artisanblend.com" className="text-xl hover:opacity-90">info@artisanblend.com</a>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <img src={icon5} className="w-12"/>
-              <h2 className="text-xl text-slate-950 font-semibold">Call-Us:</h2>
+              {/* <img src={icon5} className="w-12"/> */}
+              <Phone className="text-slate-950 dark:text-white"/>
+              <h2 className="text-xl text-slate-950 font-semibold dark:text-white">Call-Us:</h2>
               <a href="tel:+254728777119" className="text-xl hover:opacity-90">+254728777119</a>
             </div>
           </div>
