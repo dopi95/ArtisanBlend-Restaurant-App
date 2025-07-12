@@ -1,13 +1,14 @@
-import hero1 from "../../public/images/hero1.jpg";
-import hero2 from "../../public/images/hero2.jpg";
-import hero3 from "../../public/images/hero3.jpg";
-import hero4 from "../../public/images/hero4.jpg";
+import hero1 from "../../public/images/hero-1.png";
+import hero2 from "../../public/images/hero-2.png";
+import hero3 from "../../public/images/hero-3.png";
+import hero4 from "../../public/images/hero-4.png";
+import hero5 from "../../public/images/hero-5.png";
+import hero6 from "../../public/images/hero-6.png";
+import hero7 from "../../public/images/hero-7.png";
+import hero8 from "../../public/images/hero-8.png";
 
-// Reuse if needed (optional)
-const hero5 = hero1;
-const hero6 = hero2;
-const hero7 = hero3;
-const hero8 = hero4;
+
+
 
 const dishesData = [
   {
