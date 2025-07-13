@@ -1,4 +1,4 @@
-# Artisan Blend Restaurant - Restaurant Web App
+# Artisan Blend Restaurant 
 
 Welcome to **Artisan Blend Restaurant**, a modern, AI-integrated web experience that combines elegant UI/UX with a cutting-edge GenAI-powered chatbot. Built with React, Tailwind CSS, FastAPI, and Llama 2, this website offers both a visually stunning and interactive dining experience — fully responsive and intelligently guided.
 
@@ -7,7 +7,7 @@ Welcome to **Artisan Blend Restaurant**, a modern, AI-integrated web experience 
 The **Restaurant-Website** project is a collaborative group effort to build a dynamic and interactive full-stack web application for a fictional high-end restaurant called **Artisan Blend**. It features an immersive frontend experience alongside an AI-powered backend chatbot integrated with Llama 2 and LangChain, answering user queries about reservations, menu, location, and more.
 
 ## 🚀 Live Link: 
-   ## Frontend: https://artisan-blend.netlify.app/
+   https://artisan-blend.netlify.app/
 
 ## 👥 Team Members & Roles
 
