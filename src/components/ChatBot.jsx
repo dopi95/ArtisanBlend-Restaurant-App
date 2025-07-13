@@ -47,19 +47,16 @@ export default function ChatBot() {
     //   }, 1500);
     // };
     try {
-      const res = await fetch(
-        "https://dashboard.render.com/web/srv-d1fc8u6r433s73b4h6t0/chat",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            message: input,
-            session_id: sessionIdRef.current,
-          }),
-        }
-      );
+      const res = await fetch("https://artisan-blend.onrender.com/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query: input,
+          session_id: sessionIdRef.current,
+        }),
+      });
 
       const data = await res.json();
       sessionIdRef.current = data.session_id; // store session ID
