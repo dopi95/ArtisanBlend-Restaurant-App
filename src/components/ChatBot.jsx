@@ -47,7 +47,7 @@ export default function ChatBot() {
     //   }, 1500);
     // };
     try {
-      const res = await fetch("https://68a75d31560f.ngrok-free.app/chat", {
+      const res = await fetch("https://c562fe7439da.ngrok-free.app/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
