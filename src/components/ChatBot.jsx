@@ -47,13 +47,13 @@ export default function ChatBot() {
     //   }, 1500);
     // };
     try {
-      const res = await fetch("https://artisan-blend.onrender.com/chat", {
+      const res = await fetch("https://68a75d31560f.ngrok-free.app/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          query: input,
+          message: input,
           session_id: sessionIdRef.current,
         }),
       });
